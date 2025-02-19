@@ -4,50 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RicBete - Cardápio</title><!-- Open Graph Meta Tags -->
+    <title>RicBete - Cardápio</title>
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="RicBete - Cardápio">
     <meta property="og:description" content="Confira o cardápio completo da RicBete!">
     <meta property="og:image" content="https://i.imgur.com/D08woN0.png">
     <meta property="og:url" content="https://company2002.github.io/ricbete/">
     <meta property="og:type" content="website">
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             background: url('https://i.imgur.com/fCXnEfC.png') no-repeat center center fixed;
             background-size: cover;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            /* Aplica a fonte Roboto */
             color: white;
             text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
 
         .container {
             max-width: 900px;
-            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            text-align: center;
+            width: 100%;
         }
 
         .logo img {
             width: 200px;
+            margin-bottom: 10px;
         }
 
         h1 {
             color: #ffcc00;
+            margin: 15px 0;
+            width: 100%;
+            text-align: center;
         }
 
         .menu {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            flex: 1;
+            margin-right: 20px;
             text-align: left;
-            padding: 20px;
         }
 
-        .menu-category {
+        .menu-category,
+        .menu-category2 {
             background: rgba(255, 165, 0, 0.8);
             padding: 10px;
             border-radius: 5px;
@@ -56,13 +75,89 @@
             text-align: center;
         }
 
-        .menu-item {
+        .menu-item,
+        .menu-item2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 20px;
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 5px;
+            line-height: 1.5;
+        }
+
+
+        .special-price {
+            font-size: 16px;
+            /* Ajuste o tamanho da fonte conforme desejado */
+            background-color: rgba(255, 166, 0, 0.26);
+            /* Mantenha o mesmo fundo */
+            border-radius: 5px;
+            border: 2px solid rgb(250, 246, 246);
+            padding: 2px 5px;
+            line-height: 1.3;
+            display: inline-block;
+            /* Garante que o elemento respeite o tamanho interno do texto */
+            white-space: nowrap;
+            /* Impede quebra de linha dentro do elemento */
+        }
+
+        .menu-item2 {
+            font-size: 16px;
+        }
+
+        .menu-item strong,
+        .menu-item2 strong {
+            font-size: 16px;
+            /* Ajuste o tamanho da fonte conforme desejado */
+            background-color: rgba(255, 166, 0, 0.26);
+            /* Mantenha o mesmo fundo */
+            border-radius: 5px;
+            border: 2px solid rgb(250, 246, 246);
+            padding: 2px 5px;
+            line-height: 1.3;
+            display: inline-block;
+            /* Garante que o elemento respeite o tamanho interno do texto */
+            white-space: nowrap;
+            /* Impede quebra de linha dentro do elemento */
+        }
+
+        .image-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: #e6b800;
+            margin-top: 40px;
+            /* Aumentei a margem superior para descer as imagens */
+            margin-bottom: 20px;
+        }
+
+        .image-wrapper img {
+            width: auto;
+            max-width: 350px;
+            height: 200px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #e6b800;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-wrapper img:first-child {
+            transform: rotate(5deg);
+        }
+
+        .image-wrapper img:last-child {
+            transform: rotate(-5deg);
         }
 
         .whatsapp {
             margin-top: 20px;
+            text-align: center;
+            width: 100%;
         }
 
         .order-button {
@@ -74,10 +169,23 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+            border: 2px solid rgb(250, 246, 246);
         }
 
         .order-button:hover {
-            background: #e6b800;
+            background: #15f520;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu {
+                margin-right: 0;
+                text-align: center;
+            }
         }
     </style>
 
@@ -88,9 +196,9 @@
         <div class="logo">
             <img src="https://i.imgur.com/D08woN0.png" alt="RicBete Logo">
         </div>
-        <h1>Cardápio RicBete</h1>
-        <h3>Porções e Petiscos</h3>
+        <h1>CARDÁPIO RICBETE</h1>
         <div class="menu">
+            <h3>PORÇÕES E PETISCOS</h3>
             <div>
                 <div class="menu-category">Salgados Congelados</div>
                 <div class="menu-item">Pacote 50 unidades - <strong>R$ 20,00</strong></div>
@@ -98,17 +206,22 @@
                 <div class="menu-item">Pacote misto 50 unidades - <strong>R$ 23,00</strong></div>
             </div>
             <div>
+                <div class="menu-category2">Kits de Combinados</div>
+                <div class="menu-item2">2 X-Salada, 200g de fritas, 200g de calabresa - <strong>R$ 49,90</strong></div>
+                <div class="menu-item2">2 X-Salada, 200g de fritas, 200g de calabresa, 10 salgadinhos - <strong
+                        class="special-price">R$ 59,90</strong></div>
+
+            </div>
+            <div>
                 <div class="menu-category">Frito no Local</div>
                 <div class="menu-item">50 unidades fritas - <strong>R$ 35,00</strong></div>
                 <div class="menu-item">25 unidades fritas - <strong>R$ 20,00</strong></div>
                 <div class="menu-item">Misto 50 unidades fritas - <strong>R$ 38,00</strong></div>
             </div>
-            <div>
-                <div class="menu-category">Kits de Combinados</div>
-                <div class="menu-item">2 X-Salada, 200g de fritas, 200g de calabresa - <strong>R$ 49,90</strong></div>
-                <div class="menu-item">2 X-Salada, 200g de fritas, 200g de calabresa, 10 salgadinhos - <strong>R$
-                        59,90</strong></div>
-            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="0007.jpg" alt="Lanche 1">
+            <img src="0008.jpg" alt="Lanche 2">
         </div>
         <div class="whatsapp">
             <p>📞 WhatsApp: <strong>21 99547-0056</strong></p>
