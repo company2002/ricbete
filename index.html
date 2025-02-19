@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RicBete - Cardápio</title>
+    <style>
+        body {
+            background: url('https://i.imgur.com/fCXnEfC.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo img {
+            width: 200px;
+        }
+        h1 {
+            color: #ffcc00;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+            padding: 20px;
+        }
+        .menu-category {
+            background: rgba(255, 165, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .menu-item {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .whatsapp {
+            margin-top: 20px;
+        }
+        .order-button {
+            display: inline-block;
+            background: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .order-button:hover {
+            background: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://i.imgur.com/D08woN0.png" alt="RicBete Logo">
+        </div>
+        <h1>Cardápio RicBete</h1>
+        <h3>Porções e Petiscos</h3>
+        <div class="menu">
+            <div>
+                <div class="menu-category">Salgados Congelados</div>
+                <div class="menu-item">Pacote 50 unidades - <strong>R$ 20,00</strong></div>
+                <div class="menu-item">Pacote 25 unidades - <strong>R$ 12,00</strong></div>
+                <div class="menu-item">Pacote misto 50 unidades - <strong>R$ 23,00</strong></div>
+            </div>
+            <div>
+                <div class="menu-category">Frito no Local</div>
+                <div class="menu-item">50 unidades fritas - <strong>R$ 35,00</strong></div>
+                <div class="menu-item">25 unidades fritas - <strong>R$ 20,00</strong></div>
+                <div class="menu-item">Misto 50 unidades fritas - <strong>R$ 38,00</strong></div>
+            </div>
+            <div>
+                <div class="menu-category">Kits de Combinados</div>
+                <div class="menu-item">2 X-Salada, 200g de fritas, 200g de calabresa - <strong>R$ 49,90</strong></div>
+                <div class="menu-item">2 X-Salada, 200g de fritas, 200g de calabresa, 10 salgadinhos - <strong>R$ 59,90</strong></div>
+            </div>
+        </div>
+        <div class="whatsapp">
+            <p>📞 WhatsApp: <strong>21 99547-0056</strong></p>
+            <a href="https://wa.me/5521995470056" class="order-button" target="_blank">Faça o seu pedido aqui</a>
+        </div>
+    </div>
+</body>
+</html>
